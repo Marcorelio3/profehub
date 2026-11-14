@@ -78,8 +78,19 @@ Closes #XXX
 ## Checklist de Qualidade
 - [ ] Código segue padrões do projeto (ESLint, Prettier)
 - [ ] Tipos TypeScript strict (sem `any` desnecessário)
-- [ ] Acessibilidade verificada (contraste, foco, ARIA)
-- [ ] Performance considerada (bundle size, queries)
+- [ ] **Design System (OBRIGATÓRIO - ver seção 7):**
+  - [ ] Nenhum spinner nu - loading usa skeleton contextual
+  - [ ] Nenhuma transição brusca - tudo tem motion variant
+  - [ ] Nenhum estado vazio genérico - empty states com ilustração + ação
+  - [ ] Nenhum feedback faltando - toda ação tem toast/visual response
+  - [ ] Focus visível - Tab navigation clara
+  - [ ] Reduced motion respeitado - `@media (prefers-reduced-motion: reduce)`
+  - [ ] Performance 60fps - will-change, transform/opacity only
+  - [ ] Consistência - mesmos tokens duração/easing
+  - [ ] Mobile - touch feedback, drawer animations
+  - [ ] ARIA live regions - toasts/status
+- [ ] Acessibilidade verificada (contraste 4.5:1, foco, ARIA)
+- [ ] Performance considerada (bundle size, queries, Lighthouse > 90)
 - [ ] Documentação atualizada (README, comentários, types)
 - [ ] Segurança: validação de entrada, RLS, sanitização
 ```
@@ -138,7 +149,49 @@ jobs:
 
 ---
 
-## 6. Atualização deste Arquivo
+## 7. Design System - Quality Gate Obrigatório (UI/UX)
+
+**Toda interface DEVE seguir a especificação em `DESIGN_SYSTEM.md` (Issue #24).**
+
+### Requisitos Não-Negociáveis
+| Requisito | Implementação | Validação |
+|-----------|---------------|-----------|
+| **Lazy Loading** | `next/image` lazy + blur; `dynamic()` import para componentes pesados | Lighthouse Performance > 90 |
+| **Skeleton Screens** | Obrigatório em todo loading assíncrono (nunca spinner nu) | Visual review + checklist PR |
+| **Animações Entrada/Saída** | Framer Motion variants padronizados (page, card, modal, drawer, toast, listItem) | 200-400ms easeOut/In |
+| **Estados Progresso** | Todo elemento interativo: idle, hover, active, loading, disabled, error | Visual review |
+| **Feedback Visual** | Toasts (top-right, stack 3), ripple/scale click, badges status | Manual test |
+| **Transições Consistentes** | AnimatePresence + variants em: páginas, modais, sidebar, cards, listas, tabs | Visual regression |
+
+### Checklist de Revisão Sênior (Bloqueia Merge)
+Antes de aprovar PR com mudanças de UI, o reviewer **DEVE** confirmar:
+- [ ] Zero spinners nus encontrados
+- [ ] Zero transições bruscas (pulo, corte, flash)
+- [ ] Zero empty states genéricos ("Nenhum resultado", "Carregando...")
+- [ ] Zero ações sem feedback (click, submit, delete, copy, download)
+- [ ] Focus ring visível em 100% elementos interativos (Tab test)
+- [ ] `prefers-reduced-motion` desabilita animações (teste DevTools)
+- [ ] 60fps sustentado em animações (Performance tab DevTools)
+- [ ] Tokens de motion consistentes (mesma duração/easing)
+- [ ] Mobile: active states, touch targets 44x44px, drawer smooth
+- [ ] ARIA live: `polite` para status, `assertive` para erros
+
+### Tokens de Motion (Fonte da Verdade)
+```typescript
+// lib/motion/tokens.ts
+export const motionTokens = {
+  duration: { fast: 150, base: 250, slow: 400, page: 400 },
+  easing: { easeOut: 'easeOut', easeIn: 'easeIn', spring: { stiffness: 300, damping: 30 } },
+  stagger: { base: 50 },
+  reduced: { duration: 100, easing: 'linear' },
+} as const
+```
+
+**Qualquer desvio requer Issue `[Melhoria]` com justificativa e aprovação de 2 reviewers.**
+
+---
+
+## 8. Atualização deste Arquivo
 
 Se você precisar alterar este processo:
 1. Crie uma Issue `[Melhoria] Atualizar CONTRIBUTING.md`
