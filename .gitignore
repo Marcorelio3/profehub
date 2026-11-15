@@ -43,3 +43,5 @@ next-env.d.ts
 
 # tar files
 *.tar.gz
+.vercel
+.env*

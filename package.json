@@ -104,6 +104,7 @@
     "autoprefixer": "^10.4.0",
     "codecov": "^3.8.0",
     "husky": "^9.1.0",
+    "jsdom": "^31.0.1",
     "knip": "^5.0.0",
     "msw": "^2.3.0",
     "playwright": "^1.45.0",
