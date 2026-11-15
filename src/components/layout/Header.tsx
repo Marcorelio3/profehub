@@ -115,7 +115,7 @@ export function Header({ user, onSignOut, className }: HeaderProps) {
 
         <div className="flex items-center gap-2">
           <Tooltip>
-            <TooltipTrigger>
+            <TooltipTrigger asChild>
               <Button
                 variant="ghost"
                 size="icon"
@@ -130,7 +130,7 @@ export function Header({ user, onSignOut, className }: HeaderProps) {
           </Tooltip>
 
           <Tooltip>
-            <TooltipTrigger>
+            <TooltipTrigger asChild>
               <Button
                 variant="ghost"
                 size="icon"
@@ -146,7 +146,7 @@ export function Header({ user, onSignOut, className }: HeaderProps) {
           </Tooltip>
 
           <Tooltip>
-            <TooltipTrigger>
+            <TooltipTrigger asChild>
               <Button
                 variant="ghost"
                 size="icon"
