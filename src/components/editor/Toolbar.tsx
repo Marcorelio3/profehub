@@ -142,7 +142,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       aria-label="Barra de ferramentas do editor"
     >
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -157,7 +157,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -174,7 +174,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       <div className="w-px h-6 bg-border mx-1" />
 
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+        <DropdownMenuTrigger>
           <Button variant="ghost" size="icon" aria-label="Estilo de paragrafo">
             <Type className="h-4 w-4" />
           </Button>
@@ -209,7 +209,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       <div className="w-px h-6 bg-border mx-1" />
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -225,7 +225,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -241,7 +241,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -257,7 +257,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -273,7 +273,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -289,7 +289,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -307,9 +307,9 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       <div className="w-px h-6 bg-border mx-1" />
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            <DropdownMenuTrigger>
               <Button variant="ghost" size="icon" aria-label="Alinhamento">
                 <AlignLeft className="h-4 w-4" />
               </Button>
@@ -334,7 +334,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       <div className="w-px h-6 bg-border mx-1" />
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -350,7 +350,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -366,7 +366,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -382,7 +382,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -398,7 +398,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -414,7 +414,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       <div className="w-px h-6 bg-border mx-1" />
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -428,7 +428,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -442,7 +442,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -458,7 +458,7 @@ export function Toolbar({ editor, onExportPDF, className }: ToolbarProps) {
       </Tooltip>
 
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <Button variant="ghost" size="icon" onClick={onExportPDF} aria-label="Exportar PDF">
             <Download className="h-4 w-4" />
           </Button>
