@@ -164,7 +164,7 @@ export function Header({ user, onSignOut, className }: HeaderProps) {
 
           {user ? (
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
+              <DropdownMenuTrigger>
                 <Button
                   variant="ghost"
                   className="relative h-10 w-10 rounded-full"
