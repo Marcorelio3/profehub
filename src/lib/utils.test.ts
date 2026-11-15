@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { cn, formatDate, formatDateTime, slugify, truncate, debounce, throttle } from './utils';
+import { describe, expect, it } from 'vitest';
+import { cn, debounce, formatDate, formatDateTime, slugify, throttle, truncate } from './utils';
 
 describe('utils', () => {
   describe('cn', () => {
