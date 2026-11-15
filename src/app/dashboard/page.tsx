@@ -159,7 +159,7 @@ export default function DashboardPage() {
                 Gerencie suas atividades, veja estatísticas e crie novos materiais.
               </p>
             </div>
-            <Button asChild className="gap-2">
+            <Button className="gap-2">
               <Link href="/editor">
                 <Plus className="h-4 w-4" />
                 Nova Atividade
@@ -179,7 +179,7 @@ export default function DashboardPage() {
                 <Button variant="ghost" size="icon" className="h-8 w-8">
                   <Search className="h-4 w-4" />
                 </Button>
-                <Button variant="outline" size="sm" asChild>
+                <Button variant="outline" size="sm">
                   <Link href="/library">
                     <FileText className="h-4 w-4 mr-2" />
                     Ver Biblioteca

@@ -320,7 +320,7 @@ export default function LibraryPage() {
                   Descubra, use e colabore em milhares de atividades criadas por professores.
                 </p>
               </div>
-              <Button asChild className="gap-2">
+              <Button className="gap-2">
                 <Link href="/editor">
                   <Plus className="h-4 w-4" />
                   Criar Atividade
@@ -428,7 +428,7 @@ export default function LibraryPage() {
                   <p className="text-muted-foreground mb-4">
                     Comece criando sua primeira atividade para aparecer aqui.
                   </p>
-                  <Button asChild className="gap-2">
+                  <Button className="gap-2">
                     <Link href="/editor">
                       <Plus className="h-4 w-4" />
                       Criar Atividade

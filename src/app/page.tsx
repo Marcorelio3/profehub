@@ -67,13 +67,13 @@ export default function HomePage() {
               Editor A4 nativo, biblioteca colaborativa e controle total de direitos autorais.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-              <Button size="lg" asChild className="gap-2">
+              <Button size="lg" className="gap-2">
                 <Link href="/editor">
                   Começar Grátis
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="gap-2">
+              <Button size="lg" variant="outline" className="gap-2">
                 <Link href="/library">
                   Explorar Biblioteca
                   <Search className="h-4 w-4" />
@@ -190,7 +190,7 @@ export default function HomePage() {
             Junte-se a milhares de professores que já criam atividades profissionais no ProfeLab.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" variant="secondary" asChild className="gap-2">
+            <Button size="lg" variant="secondary" className="gap-2">
               <Link href="/register">
                 Criar Conta Grátis
                 <ArrowRight className="h-4 w-4" />
@@ -199,7 +199,6 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              asChild
               className="gap-2 border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10"
             >
               <Link href="/editor">

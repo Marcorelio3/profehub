@@ -246,12 +246,12 @@ export function Header({ user, onSignOut, className }: HeaderProps) {
               </Button>
             ) : (
               <>
-                <Button variant="outline" className="flex-1" asChild>
+                <Button variant="outline" className="flex-1">
                   <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
                     Entrar
                   </Link>
                 </Button>
-                <Button className="flex-1" asChild>
+                <Button className="flex-1">
                   <Link href="/register" onClick={() => setMobileMenuOpen(false)}>
                     Cadastrar
                   </Link>
