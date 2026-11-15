@@ -184,12 +184,12 @@ export function Header({ user, onSignOut, className }: HeaderProps) {
                   </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem asChild>
+                <DropdownMenuItem>
                   <Link href="/settings" className="flex items-center gap-2 w-full">
                     <User className="h-4 w-4 mr-2" /> Perfil
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
+                <DropdownMenuItem>
                   <Link href="/settings" className="flex items-center gap-2 w-full">
                     <Settings className="h-4 w-4 mr-2" /> Configurações
                   </Link>
@@ -205,10 +205,10 @@ export function Header({ user, onSignOut, className }: HeaderProps) {
             </DropdownMenu>
           ) : (
             <div className="hidden sm:flex items-center gap-2">
-              <Button variant="ghost" asChild>
+              <Button variant="ghost">
                 <Link href="/login">Entrar</Link>
               </Button>
-              <Button asChild>
+              <Button>
                 <Link href="/register">Cadastrar</Link>
               </Button>
             </div>
